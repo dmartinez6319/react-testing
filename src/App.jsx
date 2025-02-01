@@ -6,10 +6,11 @@ import Header from "./comps/Header";
 const App = () => {
   const myList = ["Frog", "Cow", "Dog", "Parrot"]; // I passed this through the Greeting comp
   const myMessage = "I swear by my skidibi, I will goon thy";
+  const titleMessage = "React Testing";
 
   return (
     <>
-      <Header />
+      <Header title = {titleMessage} />
       <Greeting myList={myList} message={myMessage} />
       <Counter />
       <GlowingStatus />

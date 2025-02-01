@@ -13,6 +13,7 @@
   /* transition: all 500ms linear 50ms; */
   border: none;
   transition: background-color 500ms linear 50ms,color 500ms linear 50ms;
+  cursor: pointer;
 
 }
 
