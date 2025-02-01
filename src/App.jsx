@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Counter from "./comps/Counter";
+import GlowingStatus from "./comps/GlowingStatus";
+import Greeting from "./comps/Greeting";
+import Header from "./comps/Header";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const myList = ["Frog", "Cow", "Dog", "Parrot"]; // I passed this through the Greeting comp
+  const myMessage = "I swear by my skidibi, I will goon thy";
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <Greeting myList={myList} message={myMessage} />
+      <Counter />
+      <GlowingStatus />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

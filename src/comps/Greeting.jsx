@@ -10,10 +10,13 @@ export default function Greeting(prop) {
   const onlyF = (animal) =>
     animal.indexOf("F") >= 0 && <li key={animal}>{animal} </li>;
 
+
+
   if (!prop.myList) {
     return (
         <>
-        <h1>Loading..</h1>
+        <h3>Loading..</h3>
+        <hr />
         </>
     )
   }
@@ -21,23 +24,18 @@ export default function Greeting(prop) {
   if (prop.myList.length === 0) {
     return (
         <>
-        <h1>There are no animals here!</h1>
+        <h3>There are no animals here!</h3>
+        <hr />
         </>
     )
   }
 
   return (
     <>
-      <h1>&quot; I swear by my skidibi, I will goon thy &quot;</h1>
+      <h3>&quot; {prop.message} &quot;</h3>
 
-      <h1>Test title</h1>
-      <svg>
-        <circle cx="25" cy="75" r="20" stroke="green" strokeWidth="2" />
-      </svg>
-      <form>
-        <input type="text" />
-      </form>
       <ul>{prop.myList.map((animal) => onlyF(animal))}</ul>
+      <hr />
     </>
   );
 }
